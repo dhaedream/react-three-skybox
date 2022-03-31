@@ -1,6 +1,15 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
+import { CubeTextureLoader } from "three";
 import "./styles.css";
+
+// big cube that surronds scene w teaxture
+function Skybox() {
+  // three hook
+  const { scene } = useThree;
+  // cubeLoader accepts array to use images to wrap
+  const loader = new CubeTextureLoader();
+}
 
 function Sphere() {
   return (
